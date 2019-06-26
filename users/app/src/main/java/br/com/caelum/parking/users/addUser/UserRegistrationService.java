@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 import br.com.caelum.parking.users.shared.domain.User;
 
 @Service
-public class UserRegistrationService {
+class UserRegistrationService {
 	
 	private final Converter<UserRegistrationForm, User> formConverter;
 	private final UserRegistrationRepository userRepository;
 	
-	public UserRegistrationService(Converter<UserRegistrationForm, User> formConverter, UserRegistrationRepository userRepository) {
+	UserRegistrationService(Converter<UserRegistrationForm, User> formConverter, UserRegistrationRepository userRepository) {
 		this.formConverter = formConverter;
 		this.userRepository = userRepository;
 	}
